@@ -34,9 +34,10 @@
 - For **installation instructions**, check the branch readme and the [wiki](https://github.com/end-4/dots-hyprland/wiki).
 
 ### [illogical_impulse](https://github.com/end-4/dots-hyprland/tree/illogical-impulse)
-<img src="https://github.com/end-4/dots-hyprland/assets/97237370/66510836-9130-42f4-b4f9-929057b0a3ff" alt="illogical impulse">
-<img src="https://github.com/end-4/dots-hyprland/assets/97237370/d4c37041-9f3a-4a5f-a8c6-b1ac6edb808b" alt="illogical impulse">
-<img src="https://github.com/end-4/dots-hyprland/assets/97237370/24643c02-660a-4bed-8772-c98b08e62ac1" alt="illogical impulse">
+![image](https://github.com/end-4/dots-hyprland/assets/97237370/66510836-9130-42f4-b4f9-929057b0a3ff)
+![image](https://github.com/end-4/dots-hyprland/assets/97237370/d4c37041-9f3a-4a5f-a8c6-b1ac6edb808b)
+![image](https://github.com/end-4/dots-hyprland/assets/97237370/85915d09-52ac-4c24-8712-cd7311bd9934)
+![image](https://github.com/end-4/dots-hyprland/assets/97237370/24643c02-660a-4bed-8772-c98b08e62ac1)
 
 
 > [!WARNING]
