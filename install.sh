@@ -18,6 +18,7 @@ function makepkg_install() {
     cd "$(basename "$1" .git)"
     echo "makepkg -si"
     makepkg -si
+    sleep 2
     cd ..
     rm -rf "$(basename "$1" .git)"
 }
@@ -27,6 +28,7 @@ sudo pacman -S coreutils brightnessctl foot fuzzel gjs gnome-bluetooth gnome-con
     grim gtk3 gtk-layer-shell libdbusmenu-gtk3 meson networkmanager npm plasma-browser-integration playerctl polkit-gnome python-pywal \
     ripgrep sassc slurp starship swayidle swaylock typescript upower xorg-xrandr webp-pixbuf-loader wget wireplumber wl-clipboard tesseract \
     yad ydotool python-pywal python-poetry python-pillow python-build
+makepkg_install https://aur.archlinux.org/python-cssutils.git
 makepkg_install https://aur.archlinux.org/adw-gtk3.git
 makepkg_install https://aur.archlinux.org/cava.git
 makepkg_install https://aur.archlinux.org/gojq.git
@@ -41,8 +43,8 @@ makepkg_install https://aur.archlinux.org/python-material-color-utilities.git
 makepkg_install https://aur.archlinux.org/swww.git
 makepkg_install https://aur.archlinux.org/ttf-material-symbols-variable.git
 makepkg_install https://aur.archlinux.org/ttf-space-mono-nerd.git
-makepkg_install https://aur.archlinux.org/ttf-jetbrains-mono-nerd.git
-makepkg_install https://aur.archlinux.org/wayland-idle-inhibitor.git
+makepkg_install https://aur.archlinux.org/ttf-jetbrains-mono-git.git
+makepkg_install https://aur.archlinux.org/wayland-idle-inhibitor-git.git
 makepkg_install https://aur.archlinux.org/wlogout.git
 
 user=$(whoami)
