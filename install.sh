@@ -38,11 +38,11 @@ makepkg_install https://aur.archlinux.org/gtklock-playerctl-module.git
 makepkg_install https://aur.archlinux.org/gtklock-powerbar-module.git
 makepkg_install https://aur.archlinux.org/gtklock-userinfo-module.git
 makepkg_install https://aur.archlinux.org/hyprland-nvidia.git
-makepkg_install https://aur.archlinux.org/lexend-fonts.git
+makepkg_install https://aur.archlinux.org/lexend-fonts-git.git
 makepkg_install https://aur.archlinux.org/python-material-color-utilities.git
 makepkg_install https://aur.archlinux.org/swww.git
-makepkg_install https://aur.archlinux.org/ttf-material-symbols-variable.git
-makepkg_install https://aur.archlinux.org/ttf-space-mono-nerd.git
+makepkg_install https://aur.archlinux.org/material-symbols-git.git
+makepkg_install https://aur.archlinux.org/ttf-spacemono.git
 makepkg_install https://aur.archlinux.org/ttf-jetbrains-mono-git.git
 makepkg_install https://aur.archlinux.org/wayland-idle-inhibitor-git.git
 makepkg_install https://aur.archlinux.org/wlogout.git
