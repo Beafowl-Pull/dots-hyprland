@@ -11,8 +11,39 @@ read
 #####################################################################################
 echo '1. Get packages and add user to video/input groups'
 
-echo 'yay -S brightnessctl coreutils curl fish foot fuzzel gjs gnome-bluetooth-3.0 gnome-control-center gnome-keyring gobject-introspection grim gtk3 gtk-layer-shell libdbusmenu-gtk3 meson networkmanager npm plasma-browser-integration playerctl polkit-gnome python-pywal ripgrep sassc slurp starship swayidle swaylock typescript upower xorg-xrandr webp-pixbuf-loader wget wireplumber wl-clipboard tesseract yad ydotool adw-gtk3-git cava gojq gradience-git gtklock gtklock-playerctl-module gtklock-powerbar-module gtklock-userinfo-module hyprland-git lexend-fonts-git python-material-color-utilities python-pywal python-poetry python-build python-pillow swww ttf-material-symbols-variable-git ttf-space-mono-nerd ttf-jetbrains-mono-nerd wayland-idle-inhibitor-git wlogout'
-yay -S brightnessctl coreutils curl fish foot fuzzel gjs gnome-bluetooth-3.0 gnome-control-center gnome-keyring gobject-introspection grim gtk3 gtk-layer-shell libdbusmenu-gtk3 meson networkmanager npm plasma-browser-integration playerctl polkit-gnome python-pywal ripgrep sassc slurp starship swayidle swaylock typescript upower xorg-xrandr webp-pixbuf-loader wget wireplumber wl-clipboard tesseract yad ydotool adw-gtk3-git cava gojq gradience-git gtklock gtklock-playerctl-module gtklock-powerbar-module gtklock-userinfo-module hyprland-git lexend-fonts-git python-material-color-utilities python-pywal python-poetry python-build python-pillow swww ttf-material-symbols-variable-git ttf-space-mono-nerd ttf-jetbrains-mono-nerd wayland-idle-inhibitor-git wlogout
+## Install all the packages
+function makepkg_install() {
+    echo "git clone $1"
+    git clone "$1"
+    cd "$(basename "$1" .git)"
+    echo "makepkg -si"
+    makepkg -si
+    cd ..
+    rm -rf "$(basename "$1" .git)"
+}
+
+## Install all the AUR packages
+sudo pacman -S coreutils brightnessctl foot fuzzel gjs gnome-bluetooth gnome-control-center gnome-keyring gobject-introspection \
+    grim gtk3 gtk-layer-shell libdbusmenu-gtk3 meson networkmanager npm plasma-browser-integration playerctl polkit-gnome python-pywal \
+    ripgrep sassc slurp starship swayidle swaylock typescript upower xorg-xrandr webp-pixbuf-loader wget wireplumber wl-clipboard tesseract \
+    yad ydotool python-pywal python-poetry python-pillow python-build
+makepkg_install https://aur.archlinux.org/adw-gtk3.git
+makepkg_install https://aur.archlinux.org/cava.git
+makepkg_install https://aur.archlinux.org/gojq.git
+makepkg_install https://aur.archlinux.org/gradience.git
+makepkg_install https://aur.archlinux.org/gtklock.git
+makepkg_install https://aur.archlinux.org/gtklock-playerctl-module.git
+makepkg_install https://aur.archlinux.org/gtklock-powerbar-module.git
+makepkg_install https://aur.archlinux.org/gtklock-userinfo-module.git
+makepkg_install https://aur.archlinux.org/hyprland-nvidia.git
+makepkg_install https://aur.archlinux.org/lexend-fonts.git
+makepkg_install https://aur.archlinux.org/python-material-color-utilities.git
+makepkg_install https://aur.archlinux.org/swww.git
+makepkg_install https://aur.archlinux.org/ttf-material-symbols-variable.git
+makepkg_install https://aur.archlinux.org/ttf-space-mono-nerd.git
+makepkg_install https://aur.archlinux.org/ttf-jetbrains-mono-nerd.git
+makepkg_install https://aur.archlinux.org/wayland-idle-inhibitor.git
+makepkg_install https://aur.archlinux.org/wlogout.git
 
 user=$(whoami)
 echo "sudo usermod -aG video $user"
